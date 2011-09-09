@@ -1,4 +1,12 @@
 FunkyTarro::Application.routes.draw do
+  get "facebook/show"
+
+  get "facebook/login"
+
+  get "facebook/logout"
+
+  get "facebook/menu"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
