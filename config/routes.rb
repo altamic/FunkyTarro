@@ -1,11 +1,11 @@
 FunkyTarro::Application.routes.draw do
-  get "facebook/show"
+  match 'facebook/show'
+  match 'facebook/login'
+  match 'facebook/logout'
+  match 'facebook/callback'
+  match 'facebook/menu'
 
-  get "facebook/login"
-
-  get "facebook/logout"
-
-  get "facebook/menu"
+  root :to => "facebook#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
