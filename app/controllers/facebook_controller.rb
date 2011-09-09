@@ -9,7 +9,7 @@ class FacebookController < ApplicationController
 
   def login
     session['oauth'] = Koala::Facebook::OAuth.new(Facebook::APP_ID, Facebook::SECRET,
-                                                  "http://localhost:3000/facebook/callback")
+                                                  "http://funky-tarro.heroku.com/facebook/callback")
     redirect_to session['oauth'].url_for_oauth_code
   end
 
