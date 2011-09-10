@@ -2,6 +2,7 @@ class FacebookController < ApplicationController
   def show
     if session['access_token']
       @face = 'You are logged in!, <a href="/facebook/logout">Logout</a>'
+      @graph = Koala::Facebook::GraphAPI.new(session["access_token"])
     else
       @face = '<a href="/facebook/login">Login</a>'
     end
