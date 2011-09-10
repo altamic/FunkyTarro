@@ -1,9 +1,9 @@
 class FacebookController < ApplicationController
   def show
     if session['access_token']
-      @face = 'You are logged in!, <a href="facebook/logout">Logout</a>'
+      @face = 'You are logged in!, <a href="/facebook/logout">Logout</a>'
     else
-      @face = '<a href="facebook/login">Login</a>'
+      @face = '<a href="/facebook/login">Login</a>'
     end
   end
 
